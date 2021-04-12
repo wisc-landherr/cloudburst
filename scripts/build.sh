@@ -14,6 +14,10 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+PROTOBUF=~landherr/public/protobuf/install
+export LD_LIBRARY_PATH=${PROTOBUF}/lib:${LD_LIBRARY_PATH}
+export PATH=${PROTOBUF}/bin:${PATH}
+
 if [ -z "$(command -v protoc)" ]; then
   echo "The protoc tool is required before you can run Cloudburst locally."
   echo "Please install protoc manually, or use the scripts in" \
